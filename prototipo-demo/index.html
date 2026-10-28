@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Master Wash | Lavadero de autos y camionetas en Ica</title>
+<meta name="description" content="Master Wash, lavadero de autos y camionetas en Ica. Autos desde S/10, camionetas desde S/15. Urb. Luren, Av. Jerónimo de Cabrera 470. Reservas al 985 442 295.">
+<meta name="theme-color" content="#0A0A0C">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;1,700;1,800;1,900&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoWash",
+  "name": "Master Wash",
+  "description": "Lavadero de autos y camionetas en Ica.",
+  "telephone": "+51985442295",
+  "sameAs": ["https://instagram.com/masterwash_ica"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Jerónimo de Cabrera 470, Urb. Luren",
+    "addressLocality": "Ica",
+    "addressCountry": "PE"
+  }
+}
+</script>
+
+<style>
+  :root {
+    --asfalto: #0A0A0C;
+    --asfalto-2: #141519;
+    --rojo: #E1222C;
+    --rojo-oscuro: #8E0B14;
+    --espuma: #E3F1F4;
+    --espuma-borde: #B9DDE6;
+    --cromo: #C4CBD2;
+    --tinta: #101114;
+    --blanco: #FFFFFF;
+    --malla: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50V16L28 0l28 16v34L28 66zm0 0v34' fill='none' stroke='%23fff' stroke-opacity='.055' stroke-width='1.2'/%3E%3Cpath d='M28 0v-0M0 50v34l28 16 28-16V50' fill='none' stroke='%23fff' stroke-opacity='.055' stroke-width='1.2'/%3E%3C/svg%3E");
+
+    --display: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+    --texto: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+    --gutter: clamp(1rem, 4vw, 4rem);
+    --nav-h: 4rem;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    background: var(--asfalto);
+    color: var(--blanco);
+    font-family: var(--texto);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--cromo); outline-offset: 3px; }
+  .on-light :focus-visible { outline-color: var(--tinta); }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+
+  /* ---------- Botón: fondo inclinado como las bandas del afiche ---------- */
+  .btn {
+    position: relative; isolation: isolate;
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font: italic 800 1.5rem/1.1 var(--display);
+    color: var(--blanco);
+    text-decoration: none;
+    border: 0; cursor: pointer;
+    background: none;
+  }
+  .btn::before {
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background: linear-gradient(100deg, var(--rojo-oscuro), var(--rojo) 45%, #C3151F);
+    transform: skewX(-10deg);
+    transition: transform 0.18s ease, filter 0.18s ease;
+  }
+  .btn:hover::before { transform: skewX(-10deg) translateX(5px); filter: brightness(1.12); }
+  .btn:active::before { transform: skewX(-10deg) scale(0.98); }
+  .btn--tinta::before { background: var(--tinta); }
+
+  /* ---------- Navegación ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 20;
+    height: var(--nav-h);
+    display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+    padding-inline: var(--gutter);
+    background: rgba(10, 10, 12, 0.86);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+  .nav__marca {
+    font: italic 900 1.9rem/1 var(--display);
+    text-decoration: none; text-transform: uppercase;
+    display: inline-flex; gap: 0.3em;
+  }
+  .nav__marca span:first-child { color: var(--cromo); }
+  .nav__marca span:last-child { color: var(--rojo); }
+  .nav__links { display: flex; align-items: center; gap: 2rem; }
+  .nav__links a:not(.nav__cta) {
+    text-decoration: none; font-weight: 500; color: #D3D8DD;
+  }
+  .nav__links a:not(.nav__cta):hover { color: var(--blanco); text-decoration: underline; text-underline-offset: 6px; text-decoration-color: var(--rojo); text-decoration-thickness: 2px; }
+  .nav__cta { padding: 0.45rem 1.4rem; font-size: 1.2rem; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background: var(--asfalto) var(--malla);
+    min-height: calc(100svh - var(--nav-h));
+    display: grid; align-items: center;
+    padding: clamp(2.5rem, 6vh, 5rem) var(--gutter);
+    overflow: hidden;
+  }
+  .hero__grid {
+    width: 100%; max-width: 92rem; margin-inline: auto;
+    display: grid; align-items: end;
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 22rem);
+    gap: clamp(1.5rem, 4vw, 4rem);
+  }
+
+  .rotulo { position: relative; container-type: inline-size; }
+  .rotulo__h1 {
+    margin: 0;
+    font: italic 900 min(32.5cqw, 38svh)/0.82 var(--display);
+    text-transform: uppercase;
+    letter-spacing: -0.005em;
+    filter: drop-shadow(0 0.025em 0 rgba(0, 0, 0, 0.7)) drop-shadow(0 0 0.1em rgba(225, 34, 44, 0.28));
+  }
+  .rotulo__h1 span {
+    display: block; width: fit-content;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+    padding-right: 0.06em;
+  }
+  .rotulo__cromo {
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #E4E8EC 26%, #9CA5AF 47%, #5E6771 52%, #CDD3D9 68%, #FFFFFF 100%);
+  }
+  .rotulo__rojo {
+    margin-left: 0.5em;
+    background-image: linear-gradient(180deg, #FF6A6E 0%, #E1222C 38%, #8A0A13 52%, #E1222C 72%, #FF4C54 100%);
+  }
+  .rotulo__espuma {
+    position: absolute; top: -24%; left: -9%;
+    width: 111%; height: 148%;
+    touch-action: pan-y;
+    cursor: crosshair;
+  }
+
+  .hero__lado {
+    position: relative; z-index: 2;
+    display: grid; gap: 1.6rem; justify-items: start;
+    padding: 0.2rem 0 0.4rem 1.7rem;
+  }
+  /* barra recta: no se desplaza con la altura del bloque, así nunca pisa el texto */
+  .hero__lado::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px;
+    background: linear-gradient(180deg, var(--rojo), var(--rojo-oscuro));
+  }
+  .hero__lede {
+    margin: 0; max-width: 17ch;
+    font: 500 1.5rem/1.28 var(--texto);
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  .tarifas { margin: 0; width: 100%; display: grid; gap: 0.35rem; }
+  .tarifa { display: flex; align-items: baseline; gap: 0.7rem; }
+  .tarifa dt { font: italic 800 1.45rem/1 var(--display); text-transform: uppercase; letter-spacing: 0.01em; }
+  .tarifa__guia { flex: 1; min-width: 1rem; border-bottom: 2px dotted rgba(255, 255, 255, 0.26); transform: translateY(-0.28rem); }
+  .tarifa dd { margin: 0; display: flex; align-items: baseline; gap: 0.45rem; }
+  .tarifa__desde { font-size: 0.92rem; color: #A5ADB5; }
+  .tarifa__precio { font: italic 900 2.7rem/0.95 var(--display); }
+  .tarifa__precio small { font-size: 0.52em; font-weight: 800; color: #FF4B54; margin-right: 0.06em; }
+
+  .contacto { width: 100%; display: grid; gap: 1.1rem; padding-top: 1.4rem; border-top: 1px solid rgba(255, 255, 255, 0.14); }
+  .contacto__tel { display: grid; gap: 0.15rem; text-decoration: none; width: fit-content; }
+  .contacto__rotulo { font-size: 0.92rem; color: #A5ADB5; }
+  .contacto__numero { font: italic 800 2.3rem/1 var(--display); letter-spacing: 0.015em; transition: color 0.15s ease; }
+  .contacto__tel:hover .contacto__numero { color: #FF4B54; }
+  .contacto__dir {
+    display: grid; grid-template-columns: auto 1fr; gap: 0.7rem; align-items: start;
+    text-decoration: none; font-size: 0.98rem; line-height: 1.45; color: #A5ADB5;
+  }
+  .contacto__dir svg { width: 1.25rem; height: 1.25rem; margin-top: 0.12rem; color: #FF4B54; }
+  .contacto__dir strong { display: block; color: var(--blanco); font-weight: 700; }
+  .contacto__dir:hover strong { text-decoration: underline; text-decoration-color: var(--rojo); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+
+  /* ---------- Precios ---------- */
+  .precios {
+    background: var(--asfalto);
+    padding: clamp(4rem, 9vw, 8rem) var(--gutter) clamp(6rem, 11vw, 10rem);
+  }
+  .precios__grid {
+    max-width: 78rem; margin-inline: auto;
+    display: grid; align-items: center;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: clamp(2rem, 6vw, 6rem);
+  }
+  .afiche {
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 0 0 6px var(--asfalto), 0 0 0 7px rgba(196, 203, 210, 0.25), 0 30px 80px rgba(225, 34, 44, 0.18);
+    transform: rotate(-1.6deg);
+  }
+  .afiche img { width: 100%; }
+
+  .titulo {
+    margin: 0 0 1rem;
+    font: italic 900 clamp(2.8rem, 7vw, 5rem)/0.95 var(--display);
+    text-transform: uppercase;
+  }
+  .precios__texto { margin: 0 0 2.2rem; color: #C5CBD1; max-width: 42ch; }
+
+  .bandas { list-style: none; margin: 0 0 2rem; padding: 0; display: grid; gap: 1rem; }
+  .banda {
+    position: relative; isolation: isolate;
+    display: flex; align-items: center; gap: 1rem;
+    padding: 0.6rem 2.4rem;
+    margin: 0;
+  }
+  .banda::before {
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background: linear-gradient(100deg, var(--rojo-oscuro), var(--rojo) 40%, #C3151F);
+    transform: skewX(-10deg);
+  }
+  .banda__nombre { font: italic 900 clamp(2rem, 4.4vw, 3rem)/1 var(--display); text-transform: uppercase; }
+  .banda__desde {
+    background: var(--tinta); padding: 0.1rem 0.7rem;
+    font: italic 700 1.05rem/1.4 var(--display);
+    transform: skewX(-10deg);
+  }
+  .banda__precio {
+    margin-left: auto;
+    font: italic 900 clamp(3rem, 7vw, 5rem)/0.9 var(--display);
+    white-space: nowrap;
+  }
+  .banda__precio small { font-size: 0.5em; font-weight: 800; margin-right: 0.08em; }
+  .banda__precio sup { font-size: 0.42em; font-weight: 800; vertical-align: top; position: relative; top: 0.12em; }
+  .precios__nota { margin: 0 0 1.8rem; font-size: 0.98rem; color: #A5ADB5; }
+
+  /* ---------- Servicios y precios ---------- */
+  .servicios {
+    background: var(--asfalto-2) var(--malla);
+    padding: clamp(4rem, 9vw, 8rem) var(--gutter) clamp(6.5rem, 11vw, 10rem);
+  }
+  .servicios__in { max-width: 78rem; margin-inline: auto; }
+  .servicios__cab {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 27rem);
+    gap: 1rem clamp(2rem, 5vw, 4rem); align-items: end;
+    margin-bottom: clamp(2.2rem, 5vw, 3.6rem);
+  }
+  .servicios__cab .titulo { margin: 0; }
+  .servicios__texto { margin: 0; color: #C5CBD1; }
+
+  .planes {
+    display: grid; grid-template-columns: 1fr 1fr 1.16fr;
+    gap: clamp(1.2rem, 2.2vw, 1.8rem); align-items: stretch;
+  }
+  .plan {
+    position: relative;
+    display: flex; flex-direction: column; gap: 1.4rem;
+    padding: 1.8rem 1.6rem 1.7rem;
+    background: var(--asfalto);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .plan__nombre { margin: 0; font: italic 900 clamp(2rem, 3.2vw, 2.7rem)/0.95 var(--display); text-transform: uppercase; }
+  .plan__precios { margin: 0; display: flex; gap: 2rem; padding-bottom: 1.3rem; border-bottom: 1px solid rgba(255, 255, 255, 0.14); }
+  .plan__precios dt { font-size: 0.92rem; color: #A5ADB5; }
+  .plan__precios dd { margin: 0.1rem 0 0; font: italic 900 3.4rem/0.95 var(--display); }
+  .plan__precios small { font-size: 0.48em; font-weight: 800; color: #FF4B54; margin-right: 0.06em; }
+  .plan__lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.65rem; flex: 1; align-content: start; }
+  .plan__lista li { position: relative; padding-left: 1.45rem; line-height: 1.45; }
+  .plan__lista li::before {
+    content: ""; position: absolute; left: 0.1rem; top: 0.5em; width: 0.55rem; height: 0.55rem;
+    background: var(--rojo); transform: skewX(-14deg);
+  }
+  .plan__reservar {
+    align-self: flex-start;
+    font: italic 800 1.3rem/1.1 var(--display); text-decoration: none; color: var(--blanco);
+    border-bottom: 2px solid var(--rojo); padding-bottom: 0.15rem;
+    transition: color 0.15s ease;
+  }
+  .plan__reservar:hover { color: #FF4B54; }
+
+  .plan--total {
+    background: linear-gradient(165deg, #2B0A0E 0%, #120A0B 60%);
+    border-color: var(--rojo);
+    box-shadow: 0 0 0 1px rgba(225, 34, 44, 0.45), 0 24px 70px rgba(225, 34, 44, 0.24);
+  }
+  .plan__etiqueta {
+    position: absolute; top: -1.05rem; right: 1.4rem; isolation: isolate;
+    padding: 0.2rem 1.1rem; font: italic 800 1.1rem/1.2 var(--display);
+  }
+  .plan__etiqueta::before {
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background: linear-gradient(100deg, var(--rojo-oscuro), var(--rojo)); transform: skewX(-10deg);
+  }
+  .plan--total .btn { align-self: flex-start; }
+
+  .extras {
+    margin-top: clamp(3rem, 6vw, 5rem);
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr);
+    gap: 1.5rem clamp(2rem, 5vw, 5rem); align-items: start;
+  }
+  .extras__titulo { margin: 0; font: italic 900 clamp(2rem, 4vw, 2.9rem)/1 var(--display); text-transform: uppercase; }
+  .extras__lista { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 clamp(1.5rem, 3vw, 2.8rem); }
+  .extra { padding: 1.1rem 0 1.4rem; border-top: 1px solid rgba(255, 255, 255, 0.16); }
+  .extra__cab { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+  .extra h4 { margin: 0; font: italic 800 1.5rem/1.1 var(--display); text-transform: uppercase; }
+  .extra__precio { font: italic 900 1.9rem/1 var(--display); white-space: nowrap; }
+  .extra__precio small { font-size: 0.55em; font-weight: 800; color: #FF4B54; margin-right: 0.05em; }
+  .extra__consulta { font: italic 800 1.25rem/1.1 var(--display); color: #FF4B54; text-decoration-thickness: 2px; text-underline-offset: 4px; white-space: nowrap; }
+  .extra__consulta:hover { color: var(--blanco); }
+  .extra p { margin: 0.45rem 0 0; color: #A5ADB5; font-size: 0.98rem; max-width: 38ch; }
+
+  /* ---------- Reserva y ubicación (sección clara) ---------- */
+  .reservas {
+    position: relative;
+    background: var(--espuma);
+    color: var(--tinta);
+    padding: clamp(4rem, 8vw, 7rem) var(--gutter) clamp(4rem, 8vw, 7rem);
+  }
+  .espuma-borde {
+    position: absolute; left: 0; right: 0; top: -47px; height: 48px;
+    background:
+      radial-gradient(circle at 50% 100%, var(--espuma) 0 17px, transparent 18px) 0 100% / 52px 36px repeat-x,
+      radial-gradient(circle at 50% 100%, var(--espuma) 0 24px, transparent 25px) 17px 100% / 83px 48px repeat-x,
+      radial-gradient(circle at 50% 100%, var(--espuma) 0 13px, transparent 14px) 9px 100% / 37px 26px repeat-x,
+      radial-gradient(circle at 50% 100%, var(--espuma) 0 20px, transparent 21px) 31px 100% / 121px 40px repeat-x;
+    pointer-events: none;
+  }
+  .reservas__grid {
+    max-width: 78rem; margin-inline: auto;
+    display: grid; align-items: start;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: clamp(2.5rem, 6vw, 6rem);
+  }
+  .reservas .titulo { color: var(--tinta); }
+  .reservas__texto { margin: 0 0 2rem; max-width: 40ch; color: #2B3036; }
+
+  .form { display: grid; gap: 1.5rem; }
+  .form fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+  .form legend, .form label.campo__etiqueta { font-weight: 700; font-size: 1rem; padding: 0; margin-bottom: 0.6rem; display: block; }
+
+  .vehiculos { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+  .vehiculo { position: relative; }
+  .vehiculo input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+  .vehiculo__cara {
+    display: grid; gap: 0.1rem;
+    padding: 0.8rem 1rem 0.7rem;
+    border: 2px solid var(--tinta);
+    background: var(--blanco);
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  }
+  .vehiculo__nombre { font: italic 900 1.65rem/1.05 var(--display); text-transform: uppercase; }
+  .vehiculo__precio { font-size: 0.92rem; color: #4A525A; }
+  .vehiculo input:checked + .vehiculo__cara { background: var(--rojo); border-color: var(--rojo); color: var(--blanco); transform: translateY(-2px); }
+  .vehiculo input:checked + .vehiculo__cara .vehiculo__precio { color: #FFE5E6; }
+  .vehiculo input:focus-visible + .vehiculo__cara { outline: 3px solid var(--tinta); outline-offset: 3px; }
+  .vehiculo input:not(:checked):hover + .vehiculo__cara { background: #F4FAFB; }
+
+  .cuando { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+  .campo input, .campo select {
+    width: 100%;
+    font: 500 1.1rem/1.4 var(--texto); color: var(--tinta);
+    background: var(--blanco);
+    border: 2px solid var(--tinta); border-radius: 0;
+    padding: 0.7rem 0.8rem;
+  }
+  .campo input:focus-visible, .campo select:focus-visible { outline: 3px solid var(--tinta); outline-offset: 3px; }
+  .campo select {
+    appearance: none; -webkit-appearance: none; cursor: pointer;
+    padding-right: 2.6rem;
+    background: var(--blanco) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='10' viewBox='0 0 16 10'%3E%3Cpath d='M1 1l7 7 7-7' fill='none' stroke='%23101114' stroke-width='2.2'/%3E%3C/svg%3E") no-repeat right 0.9rem center;
+  }
+  .form__precio { margin: 0; font: italic 900 2.2rem/1 var(--display); color: var(--tinta); }
+  .form__precio small { font-size: 0.5em; font-weight: 800; color: var(--rojo-oscuro); margin-right: 0.06em; }
+  .form__precio span { font: 500 1rem/1.3 var(--texto); font-style: normal; color: #3B434B; margin-right: 0.6rem; }
+  .form__aviso { margin: 0; font-size: 0.95rem; color: #3B434B; }
+
+  .ubicacion h3 { margin: 0 0 0.4rem; font: italic 900 clamp(2rem, 4vw, 2.8rem)/1 var(--display); text-transform: uppercase; }
+  .ubicacion__dir { margin: 0 0 1.4rem; font-size: 1.15rem; }
+  .mapa { border: 3px solid var(--tinta); background: #CBD5D9; line-height: 0; }
+  .mapa iframe { width: 100%; height: clamp(18rem, 36vw, 24rem); border: 0; filter: saturate(0.85) contrast(1.04); }
+  .ubicacion__enlace { display: inline-block; margin-top: 1rem; font-weight: 700; text-underline-offset: 5px; text-decoration-thickness: 2px; text-decoration-color: var(--rojo); }
+  .ubicacion__enlace:hover { color: var(--rojo-oscuro); }
+
+  /* ---------- Pie ---------- */
+  .pie {
+    background: var(--asfalto);
+    padding: clamp(3rem, 6vw, 5rem) var(--gutter) 2.5rem;
+  }
+  .pie__grid {
+    max-width: 78rem; margin-inline: auto;
+    display: grid; align-items: center;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: clamp(2rem, 6vw, 6rem);
+  }
+  .pie__logo { width: min(100%, 30rem); filter: drop-shadow(0 18px 40px rgba(225, 34, 44, 0.25)); }
+  .pie__lema { margin: 0 0 1.4rem; font: italic 900 clamp(2.2rem, 5vw, 3.6rem)/0.98 var(--display); text-transform: uppercase; }
+  .pie__datos { margin: 0; font-style: normal; color: #C5CBD1; display: grid; gap: 0.3rem; }
+  .pie__datos a { font-weight: 700; color: var(--blanco); }
+  .pie__legal { max-width: 78rem; margin: 3rem auto 0; padding-top: 1.4rem; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.9rem; color: #8B939B; }
+
+  /* ---------- Barra móvil ---------- */
+  .barra-movil { display: none; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 62rem) {
+    .hero { min-height: 0; }
+    .hero__grid { grid-template-columns: minmax(0, 1fr); align-items: start; gap: clamp(3rem, 9vw, 5rem); }
+    .rotulo__h1 { font-size: min(32.5cqw, 32svh); }
+    .hero__lado { max-width: 26rem; }
+    .precios__grid, .reservas__grid, .pie__grid { grid-template-columns: minmax(0, 1fr); }
+    .servicios__cab, .extras { grid-template-columns: minmax(0, 1fr); }
+    .planes { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+    .plan--total { order: -1; margin-top: 0.6rem; }
+    .afiche { max-width: 30rem; margin-inline: auto; }
+    .pie__logo { margin-inline: auto; }
+  }
+  @media (max-width: 42rem) {
+    body { padding-bottom: 4.5rem; }
+    .nav__links a:not(.nav__cta) { display: none; }
+    .hero__lado .btn { display: none; }
+    .nav__marca { font-size: 1.6rem; }
+    .banda { padding-inline: 1.4rem; gap: 0.6rem; flex-wrap: wrap; row-gap: 0; }
+    .banda__nombre { font-size: 1.8rem; }
+    .banda__precio { font-size: 3.2rem; }
+    .cuando { grid-template-columns: minmax(0, 1fr); }
+    .extras__lista { grid-template-columns: minmax(0, 1fr); }
+    .plan__precios { gap: 1.4rem; }
+    .barra-movil {
+      display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+      padding: 0.75rem var(--gutter) calc(0.75rem + env(safe-area-inset-bottom));
+      background: rgba(10, 10, 12, 0.94);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .barra-movil .btn { display: block; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav__marca" href="#inicio" aria-label="Master Wash, inicio"><span>Master</span><span>Wash</span></a>
+  <nav class="nav__links" aria-label="Principal">
+    <a href="#servicios">Servicios</a>
+    <a href="#reservas">Reservas</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a class="btn nav__cta" href="https://wa.me/51985442295?text=Hola%20Master%20Wash%2C%20quiero%20reservar%20un%20lavado." target="_blank" rel="noopener"><span>Reservar</span></a>
+  </nav>
+</header>
+
+<main id="inicio">
+
+  <section class="hero" aria-labelledby="titulo-principal">
+    <div class="hero__grid">
+      <div class="rotulo">
+        <h1 class="rotulo__h1" id="titulo-principal"><span class="rotulo__cromo">Master</span> <span class="rotulo__rojo">Wash</span></h1>
+        <canvas class="rotulo__espuma" id="espuma" aria-hidden="true"></canvas>
+      </div>
+
+      <div class="hero__lado">
+        <p class="hero__lede">Lavadero de autos y camionetas en Ica.</p>
+
+        <dl class="tarifas">
+          <div class="tarifa">
+            <dt>Autos</dt><span class="tarifa__guia" aria-hidden="true"></span>
+            <dd><span class="tarifa__desde">desde</span><span class="tarifa__precio"><small>S/</small>10</span></dd>
+          </div>
+          <div class="tarifa">
+            <dt>Camionetas</dt><span class="tarifa__guia" aria-hidden="true"></span>
+            <dd><span class="tarifa__desde">desde</span><span class="tarifa__precio"><small>S/</small>15</span></dd>
+          </div>
+        </dl>
+
+        <a class="btn" href="https://wa.me/51985442295?text=Hola%20Master%20Wash%2C%20quiero%20reservar%20un%20lavado." target="_blank" rel="noopener"><span>Reservar por WhatsApp</span></a>
+
+        <div class="contacto">
+          <a class="contacto__tel" href="tel:+51985442295" aria-label="Reservas al 985 442 295, llamar">
+            <span class="contacto__rotulo">Reservas al</span>
+            <span class="contacto__numero">985 442 295</span>
+          </a>
+          <a class="contacto__dir" href="#ubicacion">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span><strong>Av. Jerónimo de Cabrera 470</strong>Urb. Luren, al costado de la tienda Mass</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="precios" id="precios" aria-labelledby="titulo-precios">
+    <div class="precios__grid">
+      <figure class="afiche">
+        <img src="assets/afiche-v2.webp" width="1186" height="1326" loading="lazy"
+             alt="Afiche de Master Wash: camionetas desde S/15.00 y autos desde S/10.00">
+      </figure>
+
+      <div>
+        <h2 class="titulo" id="titulo-precios">Lavado desde S/10</h2>
+        <p class="precios__texto">Lavamos tu carro como si fuera nuestro. Estos son los precios de entrada; abajo ves qué incluye cada lavado.</p>
+
+        <ul class="bandas">
+          <li class="banda">
+            <span class="banda__nombre">Camionetas</span>
+            <span class="banda__desde">desde</span>
+            <span class="banda__precio"><small>S/</small>15<sup>.00</sup></span>
+          </li>
+          <li class="banda">
+            <span class="banda__nombre">Autos</span>
+            <span class="banda__desde">desde</span>
+            <span class="banda__precio"><small>S/</small>10<sup>.00</sup></span>
+          </li>
+        </ul>
+
+        <a class="btn" href="#servicios"><span>Ver servicios y precios</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="servicios" id="servicios" aria-labelledby="titulo-servicios">
+    <div class="servicios__in">
+      <header class="servicios__cab">
+        <h2 class="titulo" id="titulo-servicios">Servicios y precios</h2>
+        <p class="servicios__texto">Tres lavados y servicios extra. El precio depende de tu vehículo: auto, o camioneta y SUV.</p>
+      </header>
+
+      <div class="planes">
+        <article class="plan">
+          <h3 class="plan__nombre">Solo exterior</h3>
+          <dl class="plan__precios">
+            <div><dt>Auto</dt><dd><small>S/</small>10</dd></div>
+            <div><dt>Camioneta o SUV</dt><dd><small>S/</small>15</dd></div>
+          </dl>
+          <ul class="plan__lista">
+            <li>Hidro lavado a presión</li>
+            <li>Bañado de espuma activa</li>
+            <li>Limpieza de aros</li>
+            <li>Abrillantador de llantas</li>
+          </ul>
+          <a class="plan__reservar" href="#reservas" data-plan="exterior">Reservar este lavado</a>
+        </article>
+
+        <article class="plan">
+          <h3 class="plan__nombre">Express Maestro</h3>
+          <dl class="plan__precios">
+            <div><dt>Auto</dt><dd><small>S/</small>20</dd></div>
+            <div><dt>Camioneta o SUV</dt><dd><small>S/</small>25</dd></div>
+          </dl>
+          <ul class="plan__lista">
+            <li>Hidro lavado a presión</li>
+            <li>Bañado de espuma activa</li>
+            <li>Limpieza de aros y llantas</li>
+            <li>Aspirado de alfombras, asientos y maletero</li>
+            <li>Perfumador y silicona en todos los plásticos</li>
+          </ul>
+          <a class="plan__reservar" href="#reservas" data-plan="express">Reservar este lavado</a>
+        </article>
+
+        <article class="plan plan--total">
+          <span class="plan__etiqueta">Recomendado</span>
+          <h3 class="plan__nombre">Master Total</h3>
+          <dl class="plan__precios">
+            <div><dt>Auto</dt><dd><small>S/</small>35</dd></div>
+            <div><dt>Camioneta o SUV</dt><dd><small>S/</small>40</dd></div>
+          </dl>
+          <ul class="plan__lista">
+            <li>Todo lo del Express Maestro</li>
+            <li>Silicona protectora de plásticos de motor</li>
+            <li>Limpia parabrisas especializado premium</li>
+            <li>Silicona premium en todos los plásticos</li>
+          </ul>
+          <a class="btn" href="#reservas" data-plan="total"><span>Reservar Master Total</span></a>
+        </article>
+      </div>
+
+      <div class="extras">
+        <h3 class="extras__titulo">Extras y complementos</h3>
+        <ul class="extras__lista">
+          <li class="extra">
+            <div class="extra__cab"><h4>Lavado de salón</h4><a class="extra__consulta" href="https://wa.me/51985442295?text=Hola%20Master%20Wash%2C%20quiero%20cotizar%20un%20lavado%20de%20sal%C3%B3n." target="_blank" rel="noopener">A consultar</a></div>
+            <p>Limpieza profunda de tapicería, techo, alfombras y desinfección total. Cotización según estado y tamaño.</p>
+          </li>
+          <li class="extra">
+            <div class="extra__cab"><h4>Motos y mototaxis</h4><span class="extra__precio"><small>S/</small>8 a <small>S/</small>10</span></div>
+            <p>Motos lineales a S/8 y mototaxis a S/10. Limpieza profunda y detallada.</p>
+          </li>
+          <li class="extra">
+            <div class="extra__cab"><h4>Lavado técnico de motor</h4><span class="extra__precio"><small>S/</small>10</span></div>
+            <p>Aplicación de desengrasante, limpieza con brochas y protección de plásticos con silicona especial.</p>
+          </li>
+          <li class="extra">
+            <div class="extra__cab"><h4>Servicio de visibilidad</h4><span class="extra__precio"><small>S/</small>5</span></div>
+            <p>Limpieza profunda de todos los cristales con producto premium y microfibra de alta densidad.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="reservas on-light" id="reservas" aria-labelledby="titulo-reservas">
+    <div class="espuma-borde" aria-hidden="true"></div>
+    <div class="reservas__grid">
+
+      <div>
+        <h2 class="titulo" id="titulo-reservas">Reserva tu lavado</h2>
+        <p class="reservas__texto">Cuéntanos qué servicio quieres, qué vehículo traes y cuándo vienes. Te abrimos WhatsApp con el mensaje listo para enviar.</p>
+
+        <form class="form" id="reserva" novalidate>
+          <fieldset>
+            <legend>Tu vehículo</legend>
+            <div class="vehiculos">
+              <label class="vehiculo">
+                <input type="radio" name="vehiculo" value="auto" checked>
+                <span class="vehiculo__cara">
+                  <span class="vehiculo__nombre">Auto</span>
+                  <span class="vehiculo__precio">Desde S/10</span>
+                </span>
+              </label>
+              <label class="vehiculo">
+                <input type="radio" name="vehiculo" value="camioneta">
+                <span class="vehiculo__cara">
+                  <span class="vehiculo__nombre">Camioneta o SUV</span>
+                  <span class="vehiculo__precio">Desde S/15</span>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="campo">
+            <label class="campo__etiqueta" for="servicio">Servicio</label>
+            <select id="servicio" name="servicio">
+              <option value="">Aún no decido</option>
+              <option value="exterior">Solo exterior</option>
+              <option value="express">Express Maestro</option>
+              <option value="total">Master Total</option>
+            </select>
+          </div>
+
+          <div class="cuando">
+            <div class="campo">
+              <label class="campo__etiqueta" for="dia">Día</label>
+              <input type="date" id="dia" name="dia">
+            </div>
+            <div class="campo">
+              <label class="campo__etiqueta" for="hora">Hora</label>
+              <input type="time" id="hora" name="hora">
+            </div>
+          </div>
+
+          <p class="form__precio" id="precio-est" aria-live="polite" hidden></p>
+
+          <div>
+            <button class="btn" type="submit"><span>Enviar por WhatsApp</span></button>
+          </div>
+          <p class="form__aviso">La reserva queda confirmada cuando te respondamos por WhatsApp.</p>
+        </form>
+      </div>
+
+      <div class="ubicacion" id="ubicacion">
+        <h3>Dónde estamos</h3>
+        <p class="ubicacion__dir">Av. Jerónimo de Cabrera 470, Urb. Luren, Ica.<br>Al costado de la tienda Mass.</p>
+        <div class="mapa">
+          <iframe title="Mapa de Master Wash en Av. Jerónimo de Cabrera 470, Ica"
+                  src="https://maps.google.com/maps?q=Av.+Jer%C3%B3nimo+de+Cabrera+470,+Ica,+Per%C3%BA&output=embed"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <a class="ubicacion__enlace" href="https://www.google.com/maps/search/?api=1&query=Av.+Jer%C3%B3nimo+de+Cabrera+470%2C+Ica%2C+Per%C3%BA" target="_blank" rel="noopener">Abrir en Google Maps</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie">
+  <div class="pie__grid">
+    <img class="pie__logo" src="assets/logo-v2.webp" width="1000" height="828" loading="lazy"
+         alt="Logo de Master Wash: escudo con pistola de espuma, silueta de auto y pulidora">
+    <div>
+      <p class="pie__lema">Cuidamos tu carro como si fuera nuestro</p>
+      <address class="pie__datos">
+        <span>Reservas al <a href="tel:+51985442295">985 442 295</a></span>
+        <span>Instagram <a href="https://instagram.com/masterwash_ica" target="_blank" rel="noopener">@masterwash_ica</a></span>
+        <span>Urb. Luren, Av. Jerónimo de Cabrera 470, Ica, Perú 🇵🇪</span>
+      </address>
+    </div>
+  </div>
+  <p class="pie__legal">© 2026 Master Wash. Ica, Perú.</p>
+</footer>
+
+<div class="barra-movil">
+  <a class="btn" href="https://wa.me/51985442295?text=Hola%20Master%20Wash%2C%20quiero%20reservar%20un%20lavado." target="_blank" rel="noopener"><span>Reservar por WhatsApp</span></a>
+</div>
+
+<script>
+/* Reserva: arma el mensaje y abre WhatsApp */
+(() => {
+  const form = document.getElementById('reserva');
+  if (!form) return;
+  const dia = form.elements.dia;
+  try { dia.min = new Date().toLocaleDateString('en-CA'); } catch (_) {}
+
+  const PRECIOS = { exterior: { auto: 10, camioneta: 15 }, express: { auto: 20, camioneta: 25 }, total: { auto: 35, camioneta: 40 } };
+  const NOMBRES = { exterior: 'Solo exterior', express: 'Express Maestro', total: 'Master Total' };
+  const precio = document.getElementById('precio-est');
+
+  function actualizar() {
+    const p = PRECIOS[form.elements.servicio.value];
+    if (!p) { precio.hidden = true; return; }
+    precio.hidden = false;
+    precio.innerHTML = '<span>Precio del lavado</span><small>S/</small>' + p[form.elements.vehiculo.value];
+  }
+  form.addEventListener('change', actualizar);
+
+  /* Los botones de cada lavado dejan el servicio elegido en el formulario */
+  document.querySelectorAll('[data-plan]').forEach((a) => a.addEventListener('click', () => {
+    form.elements.servicio.value = a.dataset.plan;
+    actualizar();
+  }));
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const vehiculo = form.elements.vehiculo.value === 'camioneta' ? 'camioneta o SUV' : 'auto';
+    const servicio = NOMBRES[form.elements.servicio.value];
+    let msg = 'Hola Master Wash, quiero reservar ' + (servicio ? 'el lavado ' + servicio : 'un lavado') + ' para mi ' + vehiculo;
+    if (dia.value) {
+      const d = new Date(dia.value + 'T12:00:00');
+      msg += ' el ' + d.toLocaleDateString('es-PE', { weekday: 'long', day: 'numeric', month: 'long' });
+    }
+    if (form.elements.hora.value) msg += ' a las ' + form.elements.hora.value;
+    msg += '.';
+    window.open('https://wa.me/51985442295?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  });
+})();
+
+/* Hero: espuma con física. Las burbujas respiran y se mueven, algunas revientan
+   solas, y el chorro de agua las revienta en el centro y empuja las del borde.
+   Pasar el mouse o el dedo por encima usa el mismo chorro. */
+(() => {
+  const cv = document.getElementById('espuma');
+  if (!cv) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { cv.remove(); return; }
+
+  const ctx = cv.getContext('2d');
+  const rnd = (a, b) => a + Math.random() * (b - a);
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+  const ease = (t) => t * t * (3 - 2 * t);
+
+  let W = 0, H = 0, dpr = 1, lastW = 0;
+  let bubbles = [], pops = [], drops = [], sparks = [];
+  const box = { l: 0, t: 0, r: 0, b: 0 };
+  const jet = { has: false, x: 0, y: 0, R: 0, last: -1e9 };
+  let sweep = null, raf = 0, last = 0, T = 0, nextIdle = 0, nextSpark = 0, enVista = true;
+
+  /* ---- sprites de burbuja: cuerpo translúcido + borde irisado con reflejos ---- */
+  const N = 160, M = N / 2;
+  const lienzo = () => { const s = document.createElement('canvas'); s.width = s.height = N; return s; };
+
+  /* cuerpo: velo azulado casi transparente; al apilarse da el volumen de la espuma */
+  const cuerpo = (() => {
+    const s = lienzo(), c = s.getContext('2d');
+    const g = c.createRadialGradient(M, M, 0, M, M, M - 1);
+    g.addColorStop(0, 'rgba(170, 212, 236, 0.07)');
+    g.addColorStop(0.7, 'rgba(185, 222, 242, 0.12)');
+    g.addColorStop(0.93, 'rgba(210, 236, 250, 0.2)');
+    g.addColorStop(1, 'rgba(230, 246, 255, 0)');
+    c.fillStyle = g; c.beginPath(); c.arc(M, M, M - 1, 0, Math.PI * 2); c.fill();
+    return s;
+  })();
+
+  /* borde: película irisada, filo brillante y reflejos tipo ventana (se suma como luz) */
+  function borde(giro) {
+    const s = lienzo(), c = s.getContext('2d');
+    if (c.createConicGradient) {
+      const t = lienzo(), k = t.getContext('2d');
+      const cono = k.createConicGradient(giro, M, M);
+      [['255, 90, 170', 0], ['255, 200, 90', 0.18], ['110, 255, 200', 0.4], ['90, 170, 255', 0.62], ['190, 110, 255', 0.82], ['255, 90, 170', 1]]
+        .forEach(([rgb, p]) => cono.addColorStop(p, `rgba(${rgb}, 0.6)`));
+      k.fillStyle = cono; k.fillRect(0, 0, N, N);
+      k.globalCompositeOperation = 'destination-in';
+      const anillo = k.createRadialGradient(M, M, 0, M, M, M - 1);
+      anillo.addColorStop(0.55, 'rgba(0, 0, 0, 0)');
+      anillo.addColorStop(0.84, 'rgba(0, 0, 0, 0.38)');
+      anillo.addColorStop(0.95, 'rgba(0, 0, 0, 0.55)');
+      anillo.addColorStop(1, 'rgba(0, 0, 0, 0)');
+      k.fillStyle = anillo; k.fillRect(0, 0, N, N);
+      c.drawImage(t, 0, 0);
+    }
+    c.strokeStyle = 'rgba(235, 248, 255, 0.42)'; c.lineWidth = 1.6;
+    c.beginPath(); c.arc(M, M, M - 2, 0, Math.PI * 2); c.stroke();
+    const halo = c.createRadialGradient(M * 0.62, M * 0.56, 0, M * 0.62, M * 0.56, M * 0.32);
+    halo.addColorStop(0, 'rgba(255, 255, 255, 0.5)'); halo.addColorStop(1, 'rgba(255, 255, 255, 0)');
+    c.fillStyle = halo; c.beginPath(); c.arc(M * 0.62, M * 0.56, M * 0.32, 0, Math.PI * 2); c.fill();
+    c.strokeStyle = 'rgba(255, 255, 255, 0.95)'; c.lineWidth = 6; c.lineCap = 'round';
+    c.beginPath(); c.arc(M, M, M * 0.7, Math.PI * 1.12, Math.PI * 1.38); c.stroke();
+    c.strokeStyle = 'rgba(210, 235, 255, 0.5)'; c.lineWidth = 3.5;
+    c.beginPath(); c.arc(M, M, M * 0.74, Math.PI * 0.08, Math.PI * 0.26); c.stroke();
+    return s;
+  }
+  const bordes = [0, 1.05, 2.1, 3.15, 4.2, 5.25].map(borde);
+
+  /* ---- creación ---- */
+  function medir() {
+    const c = cv.getBoundingClientRect();
+    const ts = [...document.querySelectorAll('.rotulo__h1 span')].map((s) => s.getBoundingClientRect());
+    box.l = Math.min(...ts.map((r) => r.left)) - c.left;
+    box.r = Math.max(...ts.map((r) => r.right)) - c.left;
+    box.t = Math.min(...ts.map((r) => r.top)) - c.top;
+    box.b = Math.max(...ts.map((r) => r.bottom)) - c.top;
+  }
+  const enTexto = (b) => b.hx > box.l - 20 && b.hx < box.r + 20 && b.hy > box.t - 20 && b.hy < box.b + 20;
+
+  function crear() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const r = cv.getBoundingClientRect();
+    W = r.width; H = r.height;
+    if (!W || !H) return false;
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    medir();
+    bubbles = []; pops = []; drops = []; sparks = []; sweep = null; jet.has = false;
+
+    const base = Math.max(9, Math.min(W, H) * 0.05);
+    const n = Math.min(2200, Math.round((W * H) / (base * base) * 2.0));
+    for (let i = 0; i < n; i++) {
+      const x = rnd(0, W), y = rnd(0, H);
+      /* contorno orgánico: superelipse con ruido, así la espuma no termina en un rectángulo */
+      const nx = Math.abs(2 * x / W - 1), ny = Math.abs(2 * y / H - 1);
+      const d = Math.pow(Math.pow(nx, 4) + Math.pow(ny, 4), 0.25) + rnd(-0.07, 0.07);
+      if (d > 1) continue;
+      const e = Math.min(1, (1 - d) / 0.12);
+      const r = base * rnd(0.45, 1.9) * (0.55 + 0.45 * e);
+      if (x < r || x > W - r || y < r || y > H - r) continue;
+      bubbles.push({
+        x, y, hx: x, hy: y, vx: 0, vy: 0, r,
+        s: (Math.random() * bordes.length) | 0,
+        ph: rnd(0, Math.PI * 2), f: rnd(0.7, 1.3),
+        alive: true, g: 1, respawn: 0,
+      });
+    }
+    bubbles.sort((a, b) => b.r - a.r);
+    lastW = W;
+    return true;
+  }
+
+  /* ---- efectos ---- */
+  function salpicar(x, y, n) {
+    if (drops.length > 450) return;
+    for (let i = 0; i < n; i++) {
+      const a = -Math.PI / 2 + rnd(-1.25, 1.25), v = rnd(2, 7.5);
+      drops.push({ x, y, vx: Math.cos(a) * v, vy: Math.sin(a) * v, life: rnd(350, 850), max: 850, s: rnd(1, 3.2) });
+    }
+  }
+  function reventar(b, solita) {
+    b.alive = false;
+    b.respawn = solita ? T + rnd(1300, 2800) : 0;
+    if (solita || Math.random() < 0.3) pops.push({ x: b.x, y: b.y, r: b.r, t: 0 });
+    if (!solita && Math.random() < 0.5) salpicar(b.x, b.y, 1);
+    if (Math.random() < 0.1) sparks.push({ x: b.x, y: b.y, t: 0, s: clamp(b.r, 7, 15) });
+  }
+
+  /* El chorro revienta lo que toca al centro y empuja lo que toca al borde */
+  function golpear(x0, y0, x1, y1) {
+    const R = jet.R, core = R * 0.55, ring = R * 1.05;
+    const dx = x1 - x0, dy = y1 - y0, L2 = dx * dx + dy * dy;
+    for (const b of bubbles) {
+      if (!b.alive) continue;
+      const t = L2 ? clamp(((b.hx - x0) * dx + (b.hy - y0) * dy) / L2, 0, 1) : 0;
+      const cx = x0 + dx * t, cy = y0 + dy * t;
+      const ex = b.hx - cx, ey = b.hy - cy, d = Math.hypot(ex, ey);
+      if (d > ring) continue;
+      if (d < core * 0.8 || (d < core && Math.random() < 0.5)) { reventar(b, false); continue; }
+      if (Math.random() < 0.12) { reventar(b, false); continue; }
+      const nx = d ? ex / d : 0, ny = d ? ey / d : -1, k = ring * rnd(1.02, 1.55);
+      const hx = cx + nx * k, hy = cy + ny * k;
+      if (hx < b.r || hx > W - b.r || hy < b.r || hy > H - b.r) continue;
+      b.hx = hx; b.hy = hy;
+      b.vx += nx * 2; b.vy += ny * 2;
+    }
+  }
+  function chorro(x, y, R) {
+    jet.R = R;
+    let px = jet.has ? jet.x : x, py = jet.has ? jet.y : y;
+    if (Math.hypot(x - px, y - py) > R * 6) { px = x; py = y; }
+    golpear(px, py, x, y);
+    jet.x = x; jet.y = y; jet.has = true; jet.last = T;
+  }
+
+  /* ---- chorro automático: tres pasadas en zigzag sobre las letras ---- */
+  function barrer(velocidad) {
+    const alto = box.b - box.t, R = alto * 0.4;
+    sweep = {
+      ini: null, R, alto,
+      filas: [0.17, 0.5, 0.83].map((f) => box.t + alto * f),
+      x0: box.l + R * 0.45, x1: box.r - R * 0.45,
+      dur: 760 / velocidad,
+    };
+  }
+  function pasoBarrido(now) {
+    const s = sweep;
+    if (s.ini === null) s.ini = now;
+    const total = s.dur * s.filas.length;
+    const t = clamp(now - s.ini, 0, total);
+    const fila = Math.min(s.filas.length - 1, Math.floor(t / s.dur));
+    const u = ease((t - fila * s.dur) / s.dur);
+    const x = fila % 2 === 0 ? s.x0 + (s.x1 - s.x0) * u : s.x1 - (s.x1 - s.x0) * u;
+    const y = s.filas[fila] + Math.sin(u * Math.PI * 2) * s.alto * 0.04;
+    chorro(x, y, s.R);
+    if (t >= total) { sweep = null; jet.has = false; }
+  }
+
+  /* ---- simulación ---- */
+  function actualizar(now, dt) {
+    T = now;
+    const k = dt / 16.67;
+    if (sweep) pasoBarrido(now);
+
+    const amort = Math.pow(0.84, k);
+    for (const b of bubbles) {
+      if (!b.alive) {
+        if (b.respawn && now > b.respawn) { b.alive = true; b.respawn = 0; b.g = 0; b.x = b.hx; b.y = b.hy; b.vx = b.vy = 0; }
+        continue;
+      }
+      if (b.g < 1) b.g = Math.min(1, b.g + dt / 450);
+      b.vx = (b.vx + (b.hx - b.x) * 0.07 * k) * amort;
+      b.vy = (b.vy + (b.hy - b.y) * 0.07 * k) * amort;
+      b.x += b.vx * k; b.y += b.vy * k;
+    }
+
+    if (now > nextIdle) {
+      nextIdle = now + rnd(160, 380);
+      const b = bubbles[(Math.random() * bubbles.length) | 0];
+      if (b && b.alive && b.g >= 1 && !enTexto(b)) reventar(b, true);
+    }
+    if (now > nextSpark) {
+      nextSpark = now + rnd(300, 700);
+      const b = bubbles[(Math.random() * bubbles.length) | 0];
+      if (b && b.alive && b.g >= 1) sparks.push({ x: b.x, y: b.y, t: 0, s: clamp(b.r, 7, 15) });
+    }
+
+    if (jet.has && now - jet.last < 140) salpicar(jet.x, jet.y, 3);
+    for (const d of drops) { d.vy += 0.22 * k; d.x += d.vx * k; d.y += d.vy * k; d.life -= dt; }
+    drops = drops.filter((d) => d.life > 0 && d.y < H + 30);
+    for (const p of pops) p.t += dt;
+    pops = pops.filter((p) => p.t < 240);
+    for (const s of sparks) s.t += dt;
+    sparks = sparks.filter((s) => s.t < 650);
+  }
+
+  /* ---- dibujo ---- */
+  function estrella(x, y, S, a) {
+    ctx.save(); ctx.translate(x, y); ctx.rotate(0.25);
+    ctx.fillStyle = `rgba(255, 255, 255, ${a})`;
+    ctx.beginPath();
+    ctx.moveTo(0, -S); ctx.quadraticCurveTo(0, 0, S, 0); ctx.quadraticCurveTo(0, 0, 0, S);
+    ctx.quadraticCurveTo(0, 0, -S, 0); ctx.quadraticCurveTo(0, 0, 0, -S); ctx.fill();
+    ctx.restore();
+  }
+  function dibujar(now) {
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+
+    for (const b of bubbles) {
+      if (!b.alive) continue;
+      const g = b.g < 1 ? ease(b.g) : 1;
+      b.dr = b.r * (1 + 0.025 * Math.sin(now * 0.0021 * b.f + b.ph * 2)) * g;
+      b.dx = b.x + Math.sin(now * 0.0013 * b.f + b.ph) * b.r * 0.07;
+      b.dy = b.y + Math.cos(now * 0.0011 * b.f + b.ph * 1.7) * b.r * 0.07;
+      ctx.drawImage(cuerpo, b.dx - b.dr, b.dy - b.dr, b.dr * 2, b.dr * 2);
+    }
+    ctx.globalCompositeOperation = 'lighter';
+    ctx.globalAlpha = 0.5;
+    for (const b of bubbles) {
+      if (!b.alive) continue;
+      ctx.drawImage(bordes[b.s], b.dx - b.dr, b.dy - b.dr, b.dr * 2, b.dr * 2);
+    }
+    ctx.globalAlpha = 1;
+    ctx.globalCompositeOperation = 'source-over';
+
+    for (const p of pops) {
+      const k = p.t / 240;
+      ctx.strokeStyle = `rgba(255, 255, 255, ${0.6 * (1 - k)})`;
+      ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r * (1 + 0.4 * k), 0, Math.PI * 2); ctx.stroke();
+    }
+
+    const frescura = 1 - (now - jet.last) / 140;
+    if (jet.has && frescura > 0) {
+      const ox = W * 1.02, oy = -H * 0.3;
+      const g = ctx.createLinearGradient(ox, oy, jet.x, jet.y);
+      g.addColorStop(0, 'rgba(210, 236, 255, 0)');
+      g.addColorStop(1, `rgba(225, 244, 255, ${0.8 * frescura})`);
+      ctx.strokeStyle = g; ctx.lineCap = 'round';
+      ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(jet.x, jet.y); ctx.stroke();
+      ctx.strokeStyle = `rgba(255, 255, 255, ${0.9 * frescura})`;
+      ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(jet.x + (ox - jet.x) * 0.45, jet.y + (oy - jet.y) * 0.45); ctx.lineTo(jet.x, jet.y); ctx.stroke();
+      const glow = ctx.createRadialGradient(jet.x, jet.y, 0, jet.x, jet.y, jet.R * 0.5);
+      glow.addColorStop(0, `rgba(255, 255, 255, ${0.5 * frescura})`);
+      glow.addColorStop(1, 'rgba(255, 255, 255, 0)');
+      ctx.fillStyle = glow; ctx.beginPath(); ctx.arc(jet.x, jet.y, jet.R * 0.5, 0, Math.PI * 2); ctx.fill();
+    }
+
+    for (const d of drops) {
+      ctx.fillStyle = `rgba(235, 248, 255, ${clamp(d.life / d.max * 1.4, 0, 0.95)})`;
+      ctx.beginPath(); ctx.arc(d.x, d.y, d.s, 0, Math.PI * 2); ctx.fill();
+    }
+    for (const s of sparks) estrella(s.x, s.y, s.s * Math.sin(Math.PI * s.t / 650), 0.95);
+  }
+
+  function bucle(now) {
+    raf = requestAnimationFrame(bucle);
+    const dt = clamp(now - (last || now), 0, 40);
+    last = now;
+    actualizar(now, dt);
+    dibujar(now);
+  }
+  function empezar() { if (!raf && enVista) { last = 0; raf = requestAnimationFrame(bucle); } }
+  function parar() { cancelAnimationFrame(raf); raf = 0; }
+
+  /* ---- el usuario también puede limpiar ---- */
+  const radioUsuario = () => Math.max(40, (box.b - box.t) * 0.34);
+  const punto = (e) => { const r = cv.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; };
+  cv.addEventListener('pointerdown', (e) => { const p = punto(e); chorro(p.x, p.y, radioUsuario()); });
+  cv.addEventListener('pointermove', (e) => { const p = punto(e); chorro(p.x, p.y, radioUsuario()); });
+  ['pointerleave', 'pointerup', 'pointercancel'].forEach((ev) => cv.addEventListener(ev, () => { jet.has = false; }));
+
+  /* ---- arranque ---- */
+  function iniciar(retraso, velocidad) {
+    parar();
+    if (!crear()) return;
+    empezar();
+    setTimeout(() => barrer(velocidad), retraso);
+  }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([en]) => { enVista = en.isIntersecting; enVista ? empezar() : parar(); }).observe(cv);
+  }
+  const listo = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+  listo.then(() => iniciar(350, 1));
+
+  let rt = 0;
+  addEventListener('resize', () => {
+    clearTimeout(rt);
+    rt = setTimeout(() => {
+      if (Math.abs(cv.getBoundingClientRect().width - lastW) > 24) iniciar(0, 2);
+    }, 200);
+  });
+})();
+</script>
+</body>
+</html>
